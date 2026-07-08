@@ -4,12 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script defer type="module" src="scripts/filtered-courses.js"></script>
     <!--Alternative stylesheet <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 -->
     <title>WDD 231</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <h2>Welcome to WDD 231!-</h2>
+    <header>
+        <img id="home-logo" src="images/code-slash.svg" alt="site logo" width="510" height="510"> 
+        <span id="logo-title">My Code</span>
+        <button id="ham-button" class="hamburger"></button>
+    </header>
+    <nav id="nav-menu" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#chamber-project">Chamber Project</a></li>
+            <li><a href="#final-project">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h1 id="page-title">Home</h1>
+            <div id="main-content">
+                <div class="about-me">
+                    <h2>About Me</h2>
+                    <p>lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="student-photo">
+                    <h2>Student Photo</h2>
+                    <img src="images/avatar.jpg" alt="Student Photo" width="200" height="200" style="border-radius: 15%;">
+                </div>
+            </div>
+        </section>
+        <section id="certificates">
+            <h2>Web Certificate Courses</h2>
+            <nav>
+                <ul id="course-filter">
+                    <li><a href="#" id="all-link">All</a></li>
+                    <li><a href="#" id="cse-link">CSE</a></li>
+                    <li><a href="#" id="wdd-link">WDD</a></li>
+                </ul>
+            </nav>
+            <div class="course-list">
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#"><img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
+            <a href="#"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a>
+            <a href="#"><img src="images/facebook.svg" alt="Facebook" width="16" height="16"></a>
+            <a href="#"><img src="images/twitter-x.svg" alt="Twitter" width="16" height="16"></a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> WDD 231. Luis Navarro Ballen Utah United States.</p>
+        <p>Contact: <a href="mailto:info@wdd231.com">info@wdd231.com</a></p>
+        <p id="lastModified"></p>
+    </footer>
+    <script defer src="scripts/navigation.js"></script>
 </body>
 </html>

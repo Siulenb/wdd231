@@ -1,0 +1,328 @@
+
+/*color palette
+#2D3047 - Navy Blue
+#EAD3F0 - light purple
+#F0EAD3 - light cream
+*/
+
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Variables */
+:root {
+  --secundary-color: #2D3047;
+  --primary-color: #EAD3F0;
+  --third-color: #93B7BE;
+  --fourth-color: #F0EAD3;
+  --incomplete-color: #E0CA3C;
+  --font-family: 'Geist Pixel', sans-serif;
+  --font-content: 'Ubuntu', sans-serif; 
+}
+
+
+/* Home page styles */
+
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+  padding: 5px 0 5px 10px;
+  align-items: end;
+  border-bottom: solid 1px #ddd;
+  column-gap: 10px;
+}
+#logo-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--secundary-color);
+  font-family: var(--font-family);
+}
+
+#home-logo {
+  background-color: var(--secundary-color);
+  border-radius: 35%;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2px;
+    padding: 2px;
+}
+header span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secundary-color);
+}
+
+#page-title {
+  padding: 5px;
+  margin: 10px 10px 0;
+}
+
+/* hamburger menu styles */
+.hamburger {
+  background: none;
+  border: none;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  position: relative;
+  font-family: Verdana, sans-serif;
+}
+/* .hamburger::before, */
+.hamburger::before {
+  content: '\2630'; /* Unicode character for hamburger menu */
+  color: var(--secundary-color);
+  font-size: 2rem;
+}   
+
+.hamburger.show::before {
+  content: "\00D7"
+}
+
+/* Navigation menu styles */
+.navigation {
+  display: none;
+  font-family: var(--font-family);
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--secundary-color);
+  font-weight: bold;
+  display: block;
+  padding: .8rem 10px;
+  transition: background-color 0.3s ease;
+  border-bottom: solid 1px #ddd;
+}
+
+.navigation a:focus {
+  outline: 2px solid var(--secundary-color);
+  outline-offset: 2px;
+}
+
+.navigation a:active {
+  background-color: var(--third-color);
+}
+
+.navigation li.current {
+  background-color: var(--primary-color);
+  /*outline: 2px solid var(--secundary-color);*/   /* active state for current page */
+  /* color: Black;
+  font-family: Verdana, sans-serif; */
+}
+
+.navigation a:hover {
+  background-color: var(--primary-color);
+}
+
+/* Main content styles */
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secundary-color);
+  font-family: var(--font-family);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secundary-color);
+  font-family: var(--font-family);
+} 
+
+p {
+  font-size: 1rem;
+  color: var(--secundary-color);
+  font-family: var(--font-content);
+  line-height: 1.5;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column; /* Switches to stacked (Mobile) */
+  gap: 20px;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.about-me, .student-photo {
+  flex: 1;
+  margin: 0;
+  border: solid 1px #ddd;
+}
+
+.about-me {
+  border: 2px solid var(--third-color);
+  border-radius: 8px;
+}
+
+.about-me h2, .about-me p{
+  display: block;
+  padding: 10px;
+}
+
+.about-me p {
+  text-align: justify;
+  margin-top: 0;
+}
+
+.about-me h2 {
+  margin: 0;
+  text-align: center;
+  background-color: var(--third-color);
+}
+
+.student-photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.student-photo {
+  border: 2px solid var(--third-color);
+  border-radius: 8px;
+}
+
+.student-photo h2 {
+  display: block;
+  margin: 0;
+  text-align: center;
+  background-color: var(--third-color);
+  padding: 10px;
+}
+
+/* certificates Courses section */
+
+#certificates {
+  border: solid 2px var(--third-color);
+  padding: 0;
+  margin: 10px 0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+}
+
+#certificates h2 {
+  display: block;
+  text-align: center;
+  background-color: var(--third-color);
+  padding: 10px;
+  margin: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#certificates nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: solid 1px #ddd;
+
+}
+
+#certificates ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+#certificates a {
+  text-decoration: none;
+  color: var(--secundary-color);
+  font-family: var(--font-family);
+  font-weight: bold;
+  display: block;
+  padding: 0 10px;
+  border: solid 1px #ddd;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 44px;
+}
+
+#certificates a:hover{
+  background-color: var(--primary-color);
+}
+
+/* courses list */
+
+.course-list p{
+  text-align: center;
+}
+
+.course-card {
+  text-decoration: none;
+  color: var(--secundary-color);
+  font-weight: bold;
+  display: block;
+  padding: .8rem 10px;
+  transition: background-color 0.3s ease;
+  border: solid 1px #ddd;
+  text-align: center;
+  
+}
+
+.incomplete {
+  background-color: var(--incomplete-color);
+}
+
+
+/* Footer styles */
+
+footer {
+  text-align: center;
+  padding: 0;
+  background-color: var(--fourth-color);
+  color: var(--secundary-color);
+  font-size: 0.9rem;
+  padding: 10px 0;
+  border-radius: 8px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border:#ccc solid 1px;
+  border-radius: 35%;
+  justify-content: center;
+  align-items: center;  
+}
+
+.footer-links img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.footer-links a:hover {
+  background-color: var(--primary-color);
+
+}
