@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD231 | My Code | Luis Navarro Ballen</title>
+    <meta name="description" content="WDD231">
+    <meta name="author" content="Luis Navarro Ballen">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/large.css">
-    <script defer type="module" src="scripts/filtered-courses.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script defer src="scripts/filtered-courses.js"></script>
+    <script defer src="scripts/navigation.js"></script>
     <!--Alternative stylesheet <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 -->
-    <title>WDD 231</title>
 </head>
 <body>
     <header>
@@ -25,8 +31,8 @@
         </ul>
     </nav>
     <main>
+        <section><h1 id="page-title">Home</h1></section>
         <section>
-            <h1 id="page-title">Home</h1>
             <div id="main-content">
                 <div class="about-me">
                     <h2>About Me</h2>
@@ -34,7 +40,7 @@
                 </div>
                 <div class="student-photo">
                     <h2>Student Photo</h2>
-                    <img src="images/avatar.jpg" alt="Student Photo" width="200" height="200" style="border-radius: 15%;">
+                    <img src="images/avatar.jpg" alt="Student Photo" width="200" height="200">
                 </div>
             </div>
         </section>
@@ -63,6 +69,5 @@
         <p>Contact: <a href="mailto:info@wdd231.com">info@wdd231.com</a></p>
         <p id="lastModified"></p>
     </footer>
-    <script defer src="scripts/navigation.js"></script>
 </body>
 </html>
